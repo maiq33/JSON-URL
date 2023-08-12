@@ -1,15 +1,19 @@
+var url = "https://api.wheretheiss.at/v1/satellites/25544"
+
 function setup() {
   //cambio
-  createCanvas(1000, 1000);
-  loadJSON("https://api.wheretheiss.at/v1/satellites/25544", gotData);
+  createCanvas(600, 400);
+  loadJSON(url, gotData,);
 }
 
 function gotData(data){
-  background(0);
-  for (let i = 0; i < data.velocity/100; i++) {
-    fill(255);
-    ellipse(random(width),random(height), 5, 5);
-    
-  }
+  print(data);
+  print(data.latitude);
+}
+
+function draw(){
+  background(51);
+
+  
 }
 
